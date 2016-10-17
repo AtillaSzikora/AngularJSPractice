@@ -1,10 +1,26 @@
 {
-  "name": "AngularJS Practice",
-  "version": "0.0.1",
+  "name": "angular-js-practice",
+  "version": "1.0.0",
+  "description": "display namecards",
+  "main": "app.js",
   "dependencies": {
-    "angular": "1.5.8",
-    "jquery": "3.1.1",
-    "tether": "1.3.3",
-    "bootstrap": "4.0.0-alpha.4"
-  }
+    "jquery": "^3.1.1",
+    "angular": "^1.5.8",
+    "bootstrap": "^4.0.0-alpha.4",
+    "tether-1.3.3": "^1.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "not yet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AtillaSzikora/AngularJSPractice.git"
+  },
+  "author": "Atilla Szikora",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AtillaSzikora/AngularJSPractice/issues"
+  },
+  "homepage": "https://github.com/AtillaSzikora/AngularJSPractice#readme"
 }

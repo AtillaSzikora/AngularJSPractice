@@ -1,0 +1,13 @@
+.card {
+    width: 320px;
+    margin: 20px;
+    display: inline-block;
+}
+
+.card-block {
+    background-color: beige;
+}
+
+.fa {
+    width: 20px;
+}

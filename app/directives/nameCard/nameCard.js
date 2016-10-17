@@ -4,22 +4,22 @@ app.directive('nameCard', function () {
     };
 });
 
-var url = "http://www.filltext.com/?rows=5&" +
+var url = "http://www.filltext.com/?rows=8&" +
     "fname={firstName}&" +
     "lname={lastName}&" +
     "company={business}&" +
     "city={city}&" +
     "email={email}&" +
-    "phone={phone|format}&" +
-    "pretty=true";
+    "phone={phone|format}&";
 
-app.controller('NameCard', [function ($http) {
+app.controller('NameCard', ['$http', function ($http, CounterCtrl) {
     var vm = this;
     $http.get(url)
         .then(function Success(response) {
             vm.cardData = response.data;
         }, function Error(response) {
-            alert('The http request failed: ' + response.state);
+            alert('The http request failed: ');
         });
+    vm.urlCounter = CounterCtrl;
 }]);
 
