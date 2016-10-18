@@ -1,6 +1,6 @@
 app.directive('nameCard', ['nameCardCtrl', function (nameCardCtrl) {
     return {
-        templateUrl: 'directives/nameCard/nameCard.html',
+        templateUrl: 'src/directives/nameCard/nameCard.html',
         controller: nameCardCtrl,
         controllerAs: 'nc'
     };
