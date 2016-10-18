@@ -1,11 +1,7 @@
-app.directive('counterButton', function () {
+app.directive('counterButton', ['nameCardCtrl', function (nameCardCtrl) {
     return {
-        templateUrl: 'directives/counterButton/counterButton.html'
+        templateUrl: 'directives/counterButton/counterButton.html',
+        controller: nameCardCtrl,
+        controllerAs: 'nc'
     };
-});
-
-app.controller('CounterCtrl', [function () {
-    var vm = this;
-    vm.counterValue = 3;
-    return vm.counterValue;
 }]);

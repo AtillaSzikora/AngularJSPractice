@@ -1,25 +1,32 @@
-app.directive('nameCard', function () {
+app.directive('nameCard', ['nameCardCtrl', function (nameCardCtrl) {
     return {
-        templateUrl: 'directives/nameCard/nameCard.html'
+        templateUrl: 'directives/nameCard/nameCard.html',
+        controller: nameCardCtrl,
+        controllerAs: 'nc'
     };
-});
-
-var url = "http://www.filltext.com/?rows=8&" +
-    "fname={firstName}&" +
-    "lname={lastName}&" +
-    "company={business}&" +
-    "city={city}&" +
-    "email={email}&" +
-    "phone={phone|format}&";
-
-app.controller('NameCard', ['$http', function ($http, CounterCtrl) {
-    var vm = this;
-    $http.get(url)
-        .then(function Success(response) {
-            vm.cardData = response.data;
-        }, function Error(response) {
-            alert('The http request failed: ');
-        });
-    vm.urlCounter = CounterCtrl;
 }]);
 
+app.factory('nameCardCtrl', ['$http', function ($http) {
+    return function () {
+        var vm = this;
+        vm.cardCounter = 3;
+
+        vm.httpGet = function() {
+            vm.url = "http://www.filltext.com/?rows=" + vm.cardCounter +
+                "&fname={firstName}&" +
+                "lname={lastName}&" +
+                "company={business}&" +
+                "city={city}&" +
+                "email={email}&" +
+                "phone={phone|format}&";
+
+            $http.get(vm.url)
+                .then(function Success(response) {
+                    vm.cardData = response.data;
+                }, function Error(response) {
+                    alert('The http request failed: ');
+                });
+        };
+        vm.httpGet();
+    };
+}]);

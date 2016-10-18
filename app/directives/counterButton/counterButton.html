@@ -1,7 +1,5 @@
-<div class="container" ng-controller="CounterCtrl as cc">
-    <div class="input-group">
-        <span class="input-group-addon" id="basic-addon3">How many cards to show?</span>
-        <input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3"
-               min="1" ng-model="cc.counterValue">
-    </div>
+<div class="input-group">
+    <span class="input-group-addon" id="basic-addon3">How many cards to show?</span>
+    <input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3"
+           min="1" ng-model="nc.cardCounter" ng-change="nc.httpGet()"/>
 </div>
