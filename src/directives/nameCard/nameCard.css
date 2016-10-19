@@ -1,5 +1,5 @@
 .card {
-    width: 350px;
+    width: 450px;
     margin: 20px;
     display: inline-block;
 }
@@ -10,4 +10,10 @@
 
 .fa {
     width: 20px;
+}
+
+img {
+    border-radius: 100%;
+    float: left;
+    margin-right: 20px;
 }

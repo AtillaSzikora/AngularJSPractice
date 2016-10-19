@@ -11,14 +11,10 @@ app.factory('nameCardCtrl', ['$http', function ($http) {
         var vm = this;
         vm.cardCounter = 3;
         vm.httpGet = function() {
-            vm.url = "http://www.filltext.com/?rows=" + vm.cardCounter +
-                     "&fname={firstName}&" + "lname={lastName}&" +
-                     "company={business}&" + "city={city}&" +
-                     "email={email}&" + "phone={phone|format}&";
-
+            vm.url = "https://api.randomuser.me/?results=" + vm.cardCounter + "&inc=name,email,login,dob,cell,registered,picture";
             $http.get(vm.url)
                 .then(function Success(response) {
-                    vm.cardData = response.data;
+                    vm.cardData = response.data.results;
                 }, function Error(response) {
                     alert('The http request failed: ');
                 });

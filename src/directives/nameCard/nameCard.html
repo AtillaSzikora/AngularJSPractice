@@ -1,9 +1,13 @@
 <div class="card" ng-repeat=" card in nc.cardData">
-    <div class="card-header">{{ card.fname + " " + card.lname }}</div>
+    <div class="card-header">
+        <strong>{{ card.name.first + " " + card.name.last }}</strong>
+    </div>
     <div class="card-block">
-        <i class="fa fa-building-o"></i> {{ card.company + ", " + card.city }}<br>
-        <i class="fa fa-phone"></i> {{ card.phone }}<br>
-        <i class="fa fa-envelope-o"></i> {{ card.email }}
-        {{ nc.urlCounter.counterValue }}
+        <img ng-src="{{ card.picture.large }}" alt="">
+        {{ card.email }}<br>
+        {{ card.login.username }}<br>
+        {{ card.dob }}<br>
+        {{ card.cell }}<br>
+        {{ card.registered }}
     </div>
 </div>
