@@ -1,13 +1,16 @@
 <div class="card" ng-repeat=" card in nc.cardData">
     <div class="card-header">
-        <strong>{{ card.name.first + " " + card.name.last }}</strong>
+        <strong>{{ card.name.first | capitalLetter }}</strong>
+        <strong>{{ card.name.last | capitalLetter }}</strong>
     </div>
     <div class="card-block">
-        <img ng-src="{{ card.picture.large }}" alt="">
-        {{ card.email }}<br>
-        {{ card.login.username }}<br>
-        {{ card.dob }}<br>
-        {{ card.cell }}<br>
+        <img ng-src="{{ card.picture.large }}">
+        <i class="fa fa-envelope"></i>{{ card.email }}<br>
+        <i class="fa fa-user"></i>{{ card.login.username }}<br>
+        <i class="fa fa-map-marker"></i>{{ card.location.postcode }}
+        {{ card.location.city + " - " | capitalLetter }}
+        {{ card.location.state | capitalLetter }}<br>
+        <i class="fa fa-phone"></i>{{ card.cell }}<br>
         {{ card.registered }}
     </div>
 </div>
