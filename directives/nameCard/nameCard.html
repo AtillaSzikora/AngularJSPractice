@@ -1,0 +1,13 @@
+<div class="card" ng-repeat="card in nc.cardData | filter : {email: nc.searchValue}">
+    <div class="card-header">
+        <strong>{{ card.name.first + " " + card.name.last | capitalLetter }}</strong>
+    </div>
+    <div class="card-block">
+        <img ng-src="{{ card.picture.large }}">
+        <i class="fa fa-envelope"></i>{{ card.email }}<br>
+        <i class="fa fa-user"></i>{{ card.login.username }}<br>
+        <i class="fa fa-map-marker"></i>{{ card.location.street + "," | capitalLetter }}<br>
+        <span id="emptySpace"></span>{{ card.location.city + " " + card.location.postcode | capitalLetter }}<br>
+        <i class="fa fa-phone"></i>{{ card.cell }}<br>
+    </div>
+</div>

@@ -5,6 +5,9 @@
     opacity: 30;
 }
 
+.card:hover {
+}
+
 .card-block {
     background-color: beige;
     overflow: hidden;
@@ -12,7 +15,7 @@
     text-overflow: ellipsis;
 }
 
-.fa {
+.fa:not(.fa-search) {
     width: 25px;
     padding-bottom: 5px;
 }
@@ -21,4 +24,8 @@ img {
     border-radius: 100%;
     float: left;
     margin-right: 20px;
+}
+
+#emptySpace {
+    margin-left: 25px;
 }

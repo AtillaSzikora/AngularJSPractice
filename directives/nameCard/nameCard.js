@@ -1,6 +1,6 @@
 app.directive('nameCard', ['nameCardCtrl', function (nameCardCtrl) {
     return {
-        templateUrl: 'src/directives/nameCard/nameCard.html',
+        templateUrl: 'directives/nameCard/nameCard.html',
         controller: nameCardCtrl,
         controllerAs: 'nc'
     };
@@ -9,7 +9,8 @@ app.directive('nameCard', ['nameCardCtrl', function (nameCardCtrl) {
 app.factory('nameCardCtrl', ['$http', function ($http) {
     return function () {
         var vm = this;
-        vm.cardCounter = 3;
+        vm.cardCounter = 2;
+        vm.searchValue = "";
         vm.httpGet = function() {
             vm.url = "https://api.randomuser.me/?results=" + vm.cardCounter + "&inc=name,email,login,location,cell,picture";
             $http.get(vm.url)
