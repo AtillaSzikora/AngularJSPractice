@@ -8,9 +8,7 @@
         <i class="fa fa-envelope"></i>{{ card.email }}<br>
         <i class="fa fa-user"></i>{{ card.login.username }}<br>
         <i class="fa fa-map-marker"></i>{{ card.location.postcode }}
-        {{ card.location.city + " - " | capitalLetter }}
-        {{ card.location.state | capitalLetter }}<br>
+                                        {{ card.location.city | capitalLetter }}<br>
         <i class="fa fa-phone"></i>{{ card.cell }}<br>
-        {{ card.registered }}
     </div>
 </div>

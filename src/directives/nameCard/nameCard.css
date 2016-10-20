@@ -1,12 +1,15 @@
 .card {
-    width: 450px;
+    width: 400px;
     margin: 20px;
     display: inline-block;
-    overflow: hidden;
+    opacity: 30;
 }
 
 .card-block {
     background-color: beige;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .fa {
