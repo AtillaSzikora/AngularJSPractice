@@ -5,9 +5,6 @@
     opacity: 30;
 }
 
-.card:hover {
-}
-
 .card-block {
     background-color: beige;
     overflow: hidden;

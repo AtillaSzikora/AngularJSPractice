@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="directives/nameCard/nameCard.css">
     <link rel="stylesheet" href="directives/counterButton/counterButton.css">
 </head>
-<body>
+<body ng-controller="mainController as mainCtrl">
 
-<counter-button></counter-button>
-<name-card></name-card>
+    {{ mainCtrl.test }}
+    <counter-button search-value="mainCtrl.test"></counter-button>
+    <name-card user="mainCtrl.user" ></name-card>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -20,6 +21,7 @@
 <script src="app.js"></script>
 <script src="directives/nameCard/nameCard.js"></script>
 <script src="directives/counterButton/counterButton.js"></script>
-<script src="filter/capitalLetter.js"></script>
+<script src="filters/capitalLetter.js"></script>
+<script src="controllers/mainController.js"></script>
 </body>
 </html>

@@ -7,3 +7,4 @@ app.filter('capitalLetter', function () {
         return result;
     }
 });
+
